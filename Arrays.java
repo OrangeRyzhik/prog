@@ -172,7 +172,52 @@ class Arrays {
 		System.out.println("длинна tabel[1]: " + tabel[1].lenght);
 		System.out.println("длинна tabel[2]: " + tabel[2].lenght);
 		System.out.println("длинна tabel[3]: " + tabel[3].lenght);
+		
 
+		//цикл for.each
+		System.out.println();
+		int[] nums5 = {1,2,3,4,5,6,7,8,9,10,11,12};
+		int sum = 0;
+
+		for(int x1 : nums) {
+			System.out.println("значение:" + x1);
+			sum += x1;
+			if(x1 == 5)
+				break;
+		}
+		System.out.println("сумма первых 6 элементов массива nums5: " + sum);
+
+		//пдсчет суммы элементов в двумерном массиве
+		int sum1 = 0;
+		int[][] nums6 = new int[3][5];
+
+		for(int i = 0; i < num[6].lenght; i++)
+			for (int j1 = 0; j1 < num6[i].lenght; j1++)
+				nums6[i][j] = (i+1)*(j1+1);
+
+		//выводим элементы массива и считаем сумму
+		for(int[] x1 : nums6)
+			for(int y : x1) {
+				System.out.println("знаяение: " + y);
+				sum1 += y;
+			}
+		System.out.println("сумма: " + sum1);
+
+		System.out.println();
+		//поискпри помощи цикла "for-each"
+		int val = 9;
+		boolean found = false;
+
+		for(int x1 : nums5) {
+			if(x1 == val) {
+				found = true;
+				break;
+			}
+		}
+		if(found)
+			System.out.println("значение " + val + "найдено");
+		else
+			System.out.println("значение " + val + "не найдено");
 	}
 }
 
